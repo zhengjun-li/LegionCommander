@@ -1,4 +1,4 @@
-/** bigO = n i think
+/** bigO = n^2 i think bc you need to search the map each iteration
  * How to use unordered_map, a hash table with a key type and value type
  * how to use iterator for a map, it is a pointer object, bidirectional
  * */
