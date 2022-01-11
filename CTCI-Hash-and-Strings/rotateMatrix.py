@@ -11,11 +11,11 @@ def rotate_matrix(matrix):
         for i in range(min_index, max_index):
             temp = matrix[layer][i] #save top of the matrix
             matrix[layer][i] = matrix[max_index - i + min_index][layer] #left to top
-            matrix[max_index - i + min_index][layer] = matrix[max_index][max_index - i] #bottom to left
-            matrix[max_index][max_index - i] = matrix[i][max_index] #right to bottom
+            matrix[max_index - i + min_index][layer] = matrix[max_index][max_index - i + min_index] #bottom to left
+            matrix[max_index][max_index - i + min_index] = matrix[i][max_index] #right to bottom
             matrix[i][max_index] = temp #top to right
     return matrix
 
-input = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [13, 14, 15, 16]]
+input = [[1, 2, 3, 4, 0], [5, 6, 7, 8, 0], [-1, -1, -1, -1, -1], [9, 10, 11, 12, 0], [13, 14, 15, 16, 0]]
 result = rotate_matrix(input)
 print(result)
