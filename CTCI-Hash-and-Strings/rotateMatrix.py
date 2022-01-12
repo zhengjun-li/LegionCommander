@@ -1,6 +1,10 @@
 """
-Compress given string "aaabbbbcc" into "a3b4c2", return original str if compressed is not shorter
-- lowercase a-z only
+Rotate a nxn matrix 90 degrees to the right (in-place)
+- n can be odd or even, if odd, the center element won't move
+- saves top layer to a temp array, then rotate left to top, and so forth until we replace right with the tmep
+    - then moves 1 layer deeper and repeats, using min_index and max_index to to bound ranges to represent inner layers
+O(n^2) runtime - proof in onenote
+O(n) space - to hold temp var
 """
 def rotate_matrix(matrix):
     n = len(matrix)
